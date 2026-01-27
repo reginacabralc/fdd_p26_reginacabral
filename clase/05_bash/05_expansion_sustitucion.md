@@ -8,6 +8,7 @@ La **expansión** es cuando Bash transforma algo que escribes en otra cosa antes
 
 ## La Familia del `$` - Mapa Completo
 
+{% raw %}
 | Sintaxis | Nombre | Qué hace | Ejemplo |
 |----------|--------|----------|---------|
 | `$VAR` | Variable | Lee valor de variable | `echo $HOME` |
@@ -16,6 +17,7 @@ La **expansión** es cuando Bash transforma algo que escribes en otra cosa antes
 | `$((expr))` | Expansión aritmética | Calcula matemáticas | `echo $((2+2))` |
 | `${VAR:-val}` | Default | Valor si VAR vacía | `${nombre:-Anónimo}` |
 | `${#VAR}` | Longitud | Cuenta caracteres | `${#nombre}` |
+{% endraw %}
 
 ---
 
@@ -214,6 +216,7 @@ echo $mi_var
 # valor_default (ahora está asignada)
 ```
 
+{% raw %}
 ### `${#VAR}` - Longitud de la variable
 
 ```bash
@@ -225,6 +228,7 @@ password="secreto123"
 echo "Tu contraseña tiene ${#password} caracteres"
 # Tu contraseña tiene 10 caracteres
 ```
+{% endraw %}
 
 ### `${VAR:inicio:longitud}` - Subcadena
 
@@ -253,6 +257,7 @@ echo ${texto//uno/UNO}
 
 :::exercise{title="Expansión avanzada" difficulty="3"}
 
+{% raw %}
 ```bash
 # 1. Valores por defecto
 nombre=${NOMBRE:-Usuario}
@@ -274,6 +279,7 @@ archivo="foto_vacaciones.jpg"
 echo "Original: $archivo"
 echo "Thumbnail: ${archivo/.jpg/_thumb.jpg}"
 ```
+{% endraw %}
 
 :::
 
@@ -447,6 +453,7 @@ ls "$archivo"
 
 ## Tabla Resumen
 
+{% raw %}
 | Sintaxis | Nombre | Ejemplo | Resultado |
 |----------|--------|---------|-----------|
 | `$VAR` | Variable | `echo $HOME` | `/home/user` |
@@ -458,6 +465,7 @@ ls "$archivo"
 | `${VAR:0:4}` | Subcadena | `${HOME:0:4}` | `/hom` |
 | `{a,b,c}` | Lista | `echo {1,2,3}` | `1 2 3` |
 | `{1..5}` | Secuencia | `echo {1..5}` | `1 2 3 4 5` |
+{% endraw %}
 
 ---
 

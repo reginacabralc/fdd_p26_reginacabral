@@ -458,6 +458,7 @@ echo "Hola, $nombre"
 
 ### Opciones útiles de `read`
 
+{% raw %}
 ```bash
 # -p: Prompt en la misma línea
 read -p "Tu nombre: " nombre
@@ -476,6 +477,7 @@ read -n 1 -p "Presiona una tecla: " tecla
 echo ""
 echo "Presionaste: $tecla"
 ```
+{% endraw %}
 
 :::exercise{title="Interactuar con read" difficulty="2"}
 
