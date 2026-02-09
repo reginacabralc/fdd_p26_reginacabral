@@ -1,4 +1,4 @@
-# Tarea Redex
+# Tarea Regex
 
 **Estudiante:** José Luis Santiago Heredia
 **Fecha:** 2026-02-08
